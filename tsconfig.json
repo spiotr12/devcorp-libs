@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ng-unsubscribe": [
+        "dist/ng-unsubscribe"
+      ],
+      "ng-unsubscribe/*": [
+        "dist/ng-unsubscribe/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
