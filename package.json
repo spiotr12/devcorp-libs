@@ -1,6 +1,8 @@
 {
   "name": "devcorp-libs",
   "version": "0.0.0",
+  "author": "Piotr Starzec",
+  "repository": "https://github.com/spiotr12/devcorp-ng-libs.git",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

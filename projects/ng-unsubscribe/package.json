@@ -2,6 +2,7 @@
   "name": "@devcorp-libs/ng-unsubscribe",
   "version": "0.0.1",
   "author": "Piotr Starzec",
+  "repository": "https://github.com/spiotr12/devcorp-ng-libs.git",
   "peerDependencies": {
     "@angular/common": "^8.2.14",
     "@angular/core": "^8.2.14",
