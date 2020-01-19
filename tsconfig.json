@@ -24,6 +24,12 @@
       ],
       "ng-unsubscribe/*": [
         "dist/ng-unsubscribe/*"
+      ],
+      "store-util": [
+        "dist/store-util"
+      ],
+      "store-util/*": [
+        "dist/store-util/*"
       ]
     }
   },
