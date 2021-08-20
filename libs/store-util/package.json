@@ -1,0 +1,11 @@
+{
+  "name": "@devcorp-libs/store-util",
+  "version": "12.0.0",
+  "peerDependencies": {
+    "@ngrx/store": "~12.4.0",
+    "rxjs": "~6.6.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  }
+}

@@ -1,77 +1,131 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
-  "newProjectRoot": "projects",
+  "newProjectRoot": "libs",
   "projects": {
-    "ng-unsubscribe": {
+    "@devcorp-libs/ng-streams-killer": {
       "projectType": "library",
-      "root": "projects/ng-unsubscribe",
-      "sourceRoot": "projects/ng-unsubscribe/src",
-      "prefix": "nu",
+      "root": "libs/ng-streams-killer",
+      "sourceRoot": "libs/ng-streams-killer/src",
+      "prefix": "dcl",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "tsConfig": "projects/ng-unsubscribe/tsconfig.lib.json",
-            "project": "projects/ng-unsubscribe/ng-package.json"
-          }
+            "project": "libs/ng-streams-killer/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/ng-streams-killer/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "libs/ng-streams-killer/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/ng-unsubscribe/src/test.ts",
-            "tsConfig": "projects/ng-unsubscribe/tsconfig.spec.json",
-            "karmaConfig": "projects/ng-unsubscribe/karma.conf.js"
+            "main": "libs/ng-streams-killer/src/test.ts",
+            "tsConfig": "libs/ng-streams-killer/tsconfig.spec.json",
+            "karmaConfig": "libs/ng-streams-killer/karma.conf.js"
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": [
-              "projects/ng-unsubscribe/tsconfig.lib.json",
-              "projects/ng-unsubscribe/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
+            "lintFilePatterns": [
+              "libs/ng-streams-killer/**/*.ts",
+              "libs/ng-streams-killer/**/*.html"
             ]
           }
         }
       }
     },
-    "store-util": {
+    "@devcorp-libs/dialog": {
       "projectType": "library",
-      "root": "projects/store-util",
-      "sourceRoot": "projects/store-util/src",
-      "prefix": "lib",
+      "root": "libs/dialog",
+      "sourceRoot": "libs/dialog/src",
+      "prefix": "dcl",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "tsConfig": "projects/store-util/tsconfig.lib.json",
-            "project": "projects/store-util/ng-package.json"
-          }
+            "project": "libs/dialog/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/dialog/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "libs/dialog/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/store-util/src/test.ts",
-            "tsConfig": "projects/store-util/tsconfig.spec.json",
-            "karmaConfig": "projects/store-util/karma.conf.js"
+            "main": "libs/dialog/src/test.ts",
+            "tsConfig": "libs/dialog/tsconfig.spec.json",
+            "karmaConfig": "libs/dialog/karma.conf.js"
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": [
-              "projects/store-util/tsconfig.lib.json",
-              "projects/store-util/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
+            "lintFilePatterns": [
+              "libs/dialog/**/*.ts",
+              "libs/dialog/**/*.html"
             ]
           }
         }
       }
-    }},
-  "defaultProject": "ng-unsubscribe"
+    },
+    "@devcorp-libs/store-util": {
+      "projectType": "library",
+      "root": "libs/store-util",
+      "sourceRoot": "libs/store-util/src",
+      "prefix": "dcl",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "libs/store-util/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/store-util/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "libs/store-util/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/store-util/src/test.ts",
+            "tsConfig": "libs/store-util/tsconfig.spec.json",
+            "karmaConfig": "libs/store-util/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/store-util/**/*.ts",
+              "libs/store-util/**/*.html"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics"
+  },
+  "defaultProject": "@devcorp-libs/ng-streams-killer"
 }
