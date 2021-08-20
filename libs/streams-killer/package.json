@@ -1,5 +1,5 @@
 {
-  "name": "@devcorp-libs/ng-streams-killer",
+  "name": "@devcorp-libs/streams-killer",
   "version": "12.0.0",
   "peerDependencies": {
     "@angular/core": "~12.2.0",

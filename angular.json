@@ -3,23 +3,23 @@
   "version": 1,
   "newProjectRoot": "libs",
   "projects": {
-    "@devcorp-libs/ng-streams-killer": {
+    "@devcorp-libs/streams-killer": {
       "projectType": "library",
-      "root": "libs/ng-streams-killer",
-      "sourceRoot": "libs/ng-streams-killer/src",
+      "root": "libs/streams-killer",
+      "sourceRoot": "libs/streams-killer/src",
       "prefix": "dcl",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "libs/ng-streams-killer/ng-package.json"
+            "project": "libs/streams-killer/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "libs/ng-streams-killer/tsconfig.lib.prod.json"
+              "tsConfig": "libs/streams-killer/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "libs/ng-streams-killer/tsconfig.lib.json"
+              "tsConfig": "libs/streams-killer/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -27,17 +27,17 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "libs/ng-streams-killer/src/test.ts",
-            "tsConfig": "libs/ng-streams-killer/tsconfig.spec.json",
-            "karmaConfig": "libs/ng-streams-killer/karma.conf.js"
+            "main": "libs/streams-killer/src/test.ts",
+            "tsConfig": "libs/streams-killer/tsconfig.spec.json",
+            "karmaConfig": "libs/streams-killer/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {
             "lintFilePatterns": [
-              "libs/ng-streams-killer/**/*.ts",
-              "libs/ng-streams-killer/**/*.html"
+              "libs/streams-killer/**/*.ts",
+              "libs/streams-killer/**/*.html"
             ]
           }
         }
@@ -127,5 +127,5 @@
   "cli": {
     "defaultCollection": "@angular-eslint/schematics"
   },
-  "defaultProject": "@devcorp-libs/ng-streams-killer"
+  "defaultProject": "@devcorp-libs/streams-killer"
 }

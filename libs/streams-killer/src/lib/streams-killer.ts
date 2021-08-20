@@ -2,7 +2,7 @@ import { Injectable, OnDestroy } from '@angular/core';
 import { Subject } from 'rxjs';
 
 @Injectable()
-export abstract class DclNgStreamsKiller implements OnDestroy {
+export abstract class DclStreamsKiller implements OnDestroy {
 
   public killer$ = new Subject();
 

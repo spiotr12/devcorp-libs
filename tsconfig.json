@@ -3,9 +3,9 @@
   "compileOnSave": false,
   "compilerOptions": {
     "paths": {
-      "@devcorp-libs/ng-streams-killer": [
-        "dist/ng-streams-killer/ng-streams-killer",
-        "dist/ng-streams-killer"
+      "@devcorp-libs/streams-killer": [
+        "dist/streams-killer/streams-killer",
+        "dist/streams-killer"
       ],
       "@devcorp-libs/dialog": [
         "dist/dialog/dialog",

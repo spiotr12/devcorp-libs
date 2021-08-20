@@ -10,8 +10,8 @@
       ],
       "parserOptions": {
         "project": [
-          "libs/ng-streams-killer/tsconfig.lib.json",
-          "libs/ng-streams-killer/tsconfig.spec.json"
+          "libs/streams-killer/tsconfig.lib.json",
+          "libs/streams-killer/tsconfig.spec.json"
         ],
         "createDefaultProgram": true
       },

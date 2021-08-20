@@ -6,9 +6,9 @@
     "start": "ng serve",
     "build": "ng build",
     "build:dialog": "ng build @devcorp-libs/dialog",
-    "build:ng-streams-killer": "ng build @devcorp-libs/ng-streams-killer",
+    "build:streams-killer": "ng build @devcorp-libs/streams-killer",
     "build:store-util": "ng build @devcorp-libs/store-util",
-    "build:all": "npm run build && npm run build:dialog && npm run build:ng-streams-killer && npm run build:store-util",
+    "build:all": "npm run build && npm run build:dialog && npm run build:streams-killer && npm run build:store-util",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint"

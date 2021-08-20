@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true, // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, '../../coverage/libs/ng-streams-killer'),
+      dir: require('path').join(__dirname, '../../coverage/libs/streams-killer'),
       subdir: '.',
       reporters: [
         { type: 'html' },
