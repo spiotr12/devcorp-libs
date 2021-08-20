@@ -1,6 +1,6 @@
 {
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
-  "dest": "../../dist/devcorp-libs/ng-streams-killer",
+  "dest": "../../dist/ng-streams-killer",
   "lib": {
     "entryFile": "src/public-api.ts"
   }
