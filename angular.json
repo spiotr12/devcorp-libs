@@ -122,6 +122,46 @@
           }
         }
       }
+    },
+    "@devcorp-libs/form-validators": {
+      "projectType": "library",
+      "root": "libs/form-validators",
+      "sourceRoot": "libs/form-validators/src",
+      "prefix": "dcl",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "libs/form-validators/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/form-validators/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "libs/form-validators/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/form-validators/src/test.ts",
+            "tsConfig": "libs/form-validators/tsconfig.spec.json",
+            "karmaConfig": "libs/form-validators/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/form-validators/**/*.ts",
+              "libs/form-validators/**/*.html"
+            ]
+          }
+        }
+      }
     }
   },
   "cli": {

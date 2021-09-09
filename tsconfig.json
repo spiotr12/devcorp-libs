@@ -11,6 +11,10 @@
         "dist/dialog/dialog",
         "dist/dialog"
       ],
+      "form-validators": [
+        "dist/form-validators/form-validators",
+        "dist/form-validators"
+      ],
       "store-util": [
         "dist/store-util/store-util",
         "dist/store-util"
